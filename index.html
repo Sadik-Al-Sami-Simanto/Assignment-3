@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!--font-awesome kit-->
+    <script src="https://kit.fontawesome.com/33fb43d274.js" crossorigin="anonymous"></script>
+    <!--Tailwind-Elements kit-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <!--Tailwind CDN-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        garamond: ['EB Garamond', 'serif'],
+                        poppins: ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        'dark-1': '#111111',
+                        'dark-2': '#414040',
+                        'dark-3': '#707070',
+                        'dark-4': '#A0A0A0',
+                        'dark-5': '#CFCFCF',
+                        'dark-6': '#E7E7E7',
+                        'dark-7': '#F3F3F3',
+                        'accent-1': '#B68C5A'
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Legal Solutions</title>
+</head>
+
+<body>
+    <header class="container mx-auto">
+        <nav class="flex items-center justify-between py-4 shadow-lg lg:shadow-none navbar navbar-expand-lg">
+            <div class="container-fluid w-full flex flex-wrap items-center justify-between">
+                <button
+                    class="navbar-toggler text-gray-500 border-0 hover:shadow-none hover:no-underline py-2 px-2.5 bg-transparent focus:outline-none focus:ring-0 focus:shadow-none focus:no-underline"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="w-6" role="img"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path fill="#B68C5A"
+                            d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                        </path>
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse flex flex-grow items-center justify-between font-poppins"
+                    id="navbarSupportedContent">
+                    <img class="hidden lg:block hover:scale-105 transition-all" src="./images/logo2.png" alt="" />
+                    <ul class="navbar-nav flex flex-col list-style-none">
+                        <li class="nav-item">
+                            <a class="nav-link hover:text-accent-1 transition-all" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link items-center hover:text-accent-1 transition-all" href="#">Services <i
+                                    class="fa-solid fa-chevron-right"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover:text-accent-1 transition-all" href="#">Classes <i
+                                    class="fa-solid fa-chevron-right"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover:text-accent-1 transition-all" href="#">Blog <i
+                                    class="fa-solid fa-chevron-right"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover:text-accent-1 transition-all" href="#">Contact Us <i
+                                    class="fa-solid fa-chevron-right"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link hover:text-accent-1 transition-all lg:hidden" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal" href="#">Free Consultation <i
+                                    class="fa-solid fa-chevron-right"></i></a>
+                        </li>
+                    </ul>
+                    <button
+                        class="hover:outline hover:scale-105 outline-offset-2 outline-accent-1 py-3 px-6 bg-accent-1 rounded-xl text-white font-semibold transition-all lg:flex hidden"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Free Consultation
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
+                        id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog relative w-auto pointer-events-none">
+                            <div
+                                class="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
+                                <div
+                                    class="modal-header flex flex-shrink-0 items-center justify-center p-4 border-b border-gray-200 rounded-t-md">
+                                    <!-- Modal Title -->
+                                    <h5 class="text-xl font-medium text-center leading-normal text-gray-800"
+                                        id="exampleModalLabel">
+                                        Enter your credentials
+                                    </h5>
+
+                                </div>
+                                <!-- Modal text -->
+                                <div class="modal-body flex flex-col gap-2 relative p-4 font-poppins overflow-hidden">
+                                    <div class="flex gap-2 justify-evenly items-center">
+                                        <p class="hidden md:inline-block">Your Name :</p>
+                                        <input type="text"
+                                            class="py-2 bg-dark-6 rounded-xl form-control border-2 px-4 focus:text-gray-700 focus:bg-white focus:outline outline-1 outline-accent-1 focus:border-accent-1 focus:border-2 transition ease-in-out"
+                                            placeholder="Enter Your Name">
+                                    </div>
+                                    <div class="flex gap-2 justify-evenly items-center">
+                                        <p class="hidden md:inline-block">Your Email :</p>
+                                        <input type="text"
+                                            class="py-2 bg-dark-6 rounded-xl form-control border-2 px-4 focus:text-gray-700 focus:bg-white focus:outline outline-1 outline-accent-1 focus:border-accent-1 focus:border-2 transition ease-in-out"
+                                            placeholder="Enter Your Email">
+                                    </div>
+                                    <div class="flex gap-2 justify-evenly items-center">
+                                        <p class="hidden md:inline-block">Your Phone :</p>
+                                        <input type="text"
+                                            class="py-2 bg-dark-6 rounded-xl form-control border-2 px-4 focus:text-gray-700 focus:bg-white focus:outline outline-1 outline-accent-1 focus:border-accent-1 focus:border-2 transition ease-in-out"
+                                            placeholder="Enter Your Contact Number">
+                                    </div>
+                                </div>
+                                <!-- Modal Buttons -->
+                                <div
+                                    class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-evenly p-4 border-t border-gray-200 rounded-b-md">
+                                    <button type="button"
+                                        class="px-6 py-2.5 bg-red-500 text-white font-poppins text-xs leading-tight uppercase rounded-xl shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out"
+                                        data-bs-dismiss="modal">
+                                        Close
+                                    </button>
+                                    <button type="button"
+                                        class="px-6 py-2.5 bg-green-600 text-white font-poppins text-xs leading-tight uppercase rounded-xl shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-greem-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg transition duration-150 ease-in-out ml-1"
+                                        data-bs-dismiss="modal">
+                                        Confirm
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="lg:hidden mr-4 hover:scale-105 transition-all" src="./images/logo2.png" alt="" />
+        </nav>
+        <!-- Banner -->
+        <section
+            class="md:px-0 h-[70vh] bg-[url('./images/banner.png')] bg-cover bg-right lg:bg-center my-2 md:my-16 md:rounded-xl">
+            <div
+                class="bg-gradient-to-t from-dark-1 to-transparent h-full container mx-auto flex justify-center font-garamond text-white flex-col items-center text-center gap-2 md:gap-4 lg:gap-8">
+                <h1 class="text-3xl md:text-5xl lg:text-7xl font-extrabold">
+                    We Provide Effective
+                </h1>
+                <h1 class="text-3xl md:text-5xl lg:text-7xl font-extrabold">
+                    Legal Solutions
+                </h1>
+                <p class="font-poppins text-dark-6 text-sm md:text-base">
+                    There are many variations of passages of Lorem Ipsum available, but
+                    the majority <br />have suffered alteration in some form, by
+                    injected humour.
+                </p>
+                <div class="flex flex-col md:flex-row font-poppins items-center gap-5">
+                    <input type="text"
+                        class="h-16 w-80 md:w-96 lg:w-[500px] rounded-xl form-control border-4 px-4 focus:text-gray-700 focus:bg-white focus:outline outline-2 outline-accent-1 focus:border-accent-1 focus:border-2 transition ease-in-out"
+                        placeholder="Search your services" />
+                    <button
+                        class="flex items-center h-16 py-3 px-9 bg-accent-1 rounded-xl text-white text-xl font-semibold transition-all hover:outline hover:scale-105 outline-offset-2 outline-accent-1">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main class="container mx-auto">
+        <!-- Legal pratice area -->
+        <section class="my-12">
+            <!-- Header area -->
+            <section class="my-8 mb:my-12">
+                <div class="font-garamond text-center">
+                    <h1 class="text-4xl font-extrabold text-dark-2 my-6">The Legal Practice Area</h1>
+                    <p class="text-base text-dark-3 font-poppins">There are many variations of passages of Lorem Ipsum
+                        available, but the majority have<br>suffered alteration in some form, by injected humour.</p>
+                </div>
+            </section>
+            <!-- Cards -->
+            <section class="grid px-4 md:px-0 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+                <!-- Card-1 -->
+                <div
+                    class="px-12 py-8 md:py-14 max-w-sm mx-auto rounded-lg flex flex-col items-center gap-4 cursor-pointer hover:shadow-2xl hover:scale-105 hover:outline outline-4 outline-offset-2 outline-accent-1 transition-all">
+                    <a href="#">
+                        <img src="./images/business.png" alt="" />
+                    </a>
+                    <div class="text-center">
+                        <!-- Card-title -->
+                        <h1 class="text-dark-2 font-garamond text-3xl font-extrabold mb-8">Business Law</h1>
+                        <!-- Card-text -->
+                        <p class="text-dark-3 text-base mb-4">
+                            There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour.
+                        </p>
+                    </div>
+                    <img src="./images/Frame.png" alt="">
+                </div>
+                <!-- Card-2 -->
+                <div
+                    class="px-12 py-8 md:py-14 max-w-sm mx-auto rounded-lg flex flex-col items-center gap-4 cursor-pointer hover:shadow-2xl hover:scale-105 hover:outline outline-4 outline-offset-2 outline-accent-1 transition-all">
+                    <a href="#">
+                        <img src="./images/criminal.png" alt="" />
+                    </a>
+                    <div class="text-center">
+                        <!-- Card-title -->
+                        <h1 class="text-dark-2 font-garamond text-3xl font-extrabold mb-8">Criminal Law</h1>
+                        <!-- Card-text -->
+                        <p class="text-dark-3 text-base mb-4">
+                            There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour.
+                        </p>
+                    </div>
+                    <img src="./images/Frame.png" alt="">
+                </div>
+                <!-- Card-3 -->
+                <div
+                    class="px-12 py-8 md:py-14 max-w-sm mx-auto rounded-lg flex flex-col items-center gap-4 cursor-pointer hover:shadow-2xl hover:scale-105 hover:outline outline-4 outline-offset-2 outline-accent-1 transition-all">
+                    <a href="#">
+                        <img src="./images/child.png" alt="" />
+                    </a>
+                    <div class="text-center">
+                        <!-- Card-title -->
+                        <h1 class="text-dark-2 font-garamond text-3xl font-extrabold mb-8">Child Support</h1>
+                        <!-- Card-text -->
+                        <p class="text-dark-3 text-base mb-4">
+                            There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour.
+                        </p>
+                    </div>
+                    <img src="./images/Frame.png" alt="">
+                </div>
+                <!-- Card-4 -->
+                <div
+                    class="px-12 py-8 md:py-14 max-w-sm mx-auto rounded-lg flex flex-col items-center gap-4 cursor-pointer hover:shadow-2xl hover:scale-105 hover:outline outline-4 outline-offset-2 outline-accent-1 transition-all">
+                    <a href="#">
+                        <img src="./images/education.png" alt="" />
+                    </a>
+                    <div class="text-center">
+                        <!-- Card-title -->
+                        <h1 class="text-dark-2 font-garamond text-3xl font-extrabold mb-8">Education Law</h1>
+                        <!-- Card-text -->
+                        <p class="text-dark-3 text-base mb-4">
+                            There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour.
+                        </p>
+                    </div>
+                    <img src="./images/Frame.png" alt="">
+                </div>
+                <!-- Card-5 -->
+                <div
+                    class="px-12 py-8 md:py-14 max-w-sm mx-auto rounded-lg flex flex-col items-center gap-4 cursor-pointer hover:shadow-2xl hover:scale-105 hover:outline outline-4 outline-offset-2 outline-accent-1 transition-all">
+                    <a href="#">
+                        <img src="./images/divorce.png" alt="" />
+                    </a>
+                    <div class="text-center">
+                        <!-- Card-title -->
+                        <h1 class="text-dark-2 font-garamond text-3xl font-extrabold mb-8">Divorce Law</h1>
+                        <!-- Card-text -->
+                        <p class="text-dark-3 text-base mb-4">
+                            There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour.
+                        </p>
+                    </div>
+                    <img src="./images/Frame.png" alt="">
+                </div>
+                <!-- Card-6 -->
+                <div
+                    class="px-12 py-8 md:py-14 max-w-sm mx-auto rounded-lg flex flex-col items-center gap-4 cursor-pointer hover:shadow-2xl hover:scale-105 hover:outline outline-4 outline-offset-2 outline-accent-1 transition-all">
+                    <a href="#">
+                        <img src="./images/tax.png" alt="" />
+                    </a>
+                    <div class="text-center">
+                        <!-- Card-title -->
+                        <h1 class="text-dark-2 font-garamond text-3xl font-extrabold mb-8">Tax Law</h1>
+                        <!-- Card-text -->
+                        <p class="text-dark-3 text-base mb-4">
+                            There are many variations of passages of Lorem Ipsum available, but the majority have
+                            suffered alteration in some form, by injected humour.
+                        </p>
+                    </div>
+                    <img src="./images/Frame.png" alt="">
+                </div>
+            </section>
+        </section>
+        <!-- Carousel -->
+        <section class="my-12 md:my-16 lg:my-32">
+            <section class="my-12">
+                <div class="font-garamond text-center">
+                    <h1 class="text-4xl font-extrabold text-dark-2 my-6">What Our Client Say</h1>
+                    <p class="text-base text-dark-3 font-poppins">There are many variations of passages of Lorem Ipsum
+                        available, but the majority have<br>suffered alteration in some form, by injected humour.</p>
+                </div>
+            </section>
+            <!-- Carousel -->
+            <div id="carouselExampleCaptions" class="carousel slide relative" data-bs-ride="carousel">
+                <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner relative w-full overflow-hidden md:rounded-lg">
+                    <div class="carousel-item active relative float-left w-full">
+                        <img src="./images/slider-1.jpg" class="block w-full" alt="..." />
+                        <div class="carousel-caption block lg:top-1/2 absolute text-center">
+                            <img class="w-10 md:w-20 mx-auto" src="./images/client.png" alt="">
+                            <h5 class="text-xl md:text-2xl font-garamond font-extrabold text-gray-200">Awlad Hossain
+                            </h5>
+                            <p class="font-poppins text-white">UIX Designer.</p>
+                            <p class="font-poppins text-white hidden lg:block">Contrary to popular belief, Lorem Ipsum is not simply
+                                random text. It has roots in a piece of classical Latin literature from 45 BC, making it
+                                over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                                Virginia, looked up one of the more obscure Latin words, consectetur.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item relative float-left w-full">
+                        <img src="./images/slider-2.jpg" class="block w-full" alt="..." />
+                        <div class="carousel-caption block lg:top-1/2 absolute text-center">
+                            <img class="w-10 md:w-20 mx-auto" src="./images/client.png" alt="">
+                            <h5 class="text-xl md:text-2xl font-garamond font-extrabold text-gray-200">Awlad Hossain
+                            </h5>
+                            <p class="font-poppins text-white">UIX Designer.</p>
+                            <p class="font-poppins text-white hidden lg:block">Contrary to popular belief, Lorem Ipsum is not simply
+                                random text. It has roots in a piece of classical Latin literature from 45 BC, making it
+                                over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                                Virginia, looked up one of the more obscure Latin words, consectetur.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item relative float-left w-full">
+                        <img src="./images/slider-3.jpg" class="block w-full" alt="..." />
+                        <div class="carousel-caption block lg:top-1/2 absolute text-center">
+                            <img class="w-10 md:w-20 mx-auto" src="./images/client.png" alt="">
+                            <h5 class="text-xl md:text-2xl font-garamond font-extrabold text-gray-200">Awlad Hossain
+                            </h5>
+                            <p class="font-poppins text-white">UIX Designer.</p>
+                            <p class="font-poppins text-white hidden lg:block">Contrary to popular belief, Lorem Ipsum is not simply
+                                random text. It has roots in a piece of classical Latin literature from 45 BC, making it
+                                over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in
+                                Virginia, looked up one of the more obscure Latin words, consectetur.</p>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                    type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                    class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                    type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <!-- Accordion -->
+        <section class="my-32 px-4 md:px-0">
+            <section class="my-12">
+                <div class="font-garamond text-center">
+                    <h1 class="text-4xl font-extrabold text-dark-2 my-6">Frequently Asked Any Questions</h1>
+                    <p class="text-base text-dark-3 font-poppins">There are many variations of passages of Lorem Ipsum
+                        available, but the majority have<br>suffered alteration in some form, by injected humour.</p>
+                </div>
+            </section>
+            <section class="flex flex-col-reverse lg:flex-row justify-between">
+                <div class="lg:w-1/2">
+                    <div class="accordion flex flex-col md:gap-6 lg:gap-12" id="accordionExample">
+                        <div class="accordion-item bg-white border border-gray-200">
+                            <h2 class="accordion-header mb-0" id="headingOne">
+                                <button class="
+                              accordion-button
+                              relative
+                              flex
+                              items-center
+                              w-full
+                              py-4
+                              px-5
+                              text-xl lg:text-2xl font-garamond font-extrabold text-gray-800 text-left
+                              bg-white
+                              border-0
+                              rounded-none
+                              transition
+                              focus:outline
+                              focus:text-accent-1
+                            " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    What is the difference between Flexbox and Grid?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body py-4 px-5 text-dark-3 font-poppins">
+                                    The basic difference between <strong>CSS Grid Layout</strong> and <strong>CSS
+                                        Flexbox Layout</strong> is that flexbox
+                                    was designed for layout in one dimension - either a row or a column. Grid was
+                                    designed for two-dimensional layout - rows, and columns at the same time.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white border border-gray-200">
+                            <h2 class="accordion-header mb-0" id="headingTwo">
+                                <button class="
+                              accordion-button
+                              collapsed
+                              relative
+                              flex
+                              items-center
+                              w-full
+                              py-4
+                              px-5
+                              text-xl lg:text-2xl font-garamond font-extrabold text-gray-800 text-left
+                              bg-white
+                              border-0
+                              rounded-none
+                              transition
+                              focus:outline
+                              focus:text-accent-1
+                            " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    What is the purpose of Media Queries?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body py-4 px-5 text-dark-3 font-poppins">
+                                    <strong>Media queries</strong> are a key part of responsive web design, as they
+                                    allow you to create
+                                    different layouts depending on the size of the viewport, but they can also be used
+                                    to detect other things about the environment your site is running on, for example
+                                    whether the user is using a touchscreen rather than a mouse.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white border border-gray-200">
+                            <h2 class="accordion-header mb-0" id="headingThree">
+                                <button class="
+                              accordion-button
+                              collapsed
+                              relative
+                              flex
+                              items-center
+                              w-full
+                              py-4
+                              px-5
+                              text-xl lg:text-2xl font-garamond font-extrabold text-gray-800 text-left
+                              bg-white
+                              border-0
+                              rounded-none
+                              transition
+                              focus:outline
+                              focus:text-accent-1
+                            " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                    aria-expanded="false" aria-controls="collapseThree">
+                                    What is CSS box model and How does it work?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body py-4 px-5 text-dark-3 font-poppins">
+                                    A box in CSS consists of a <strong>content</strong> area, which is where any text,
+                                    images, or other
+                                    HTML elements are displayed. This is optionally surrounded by padding, a border, and
+                                    a margin, on one or more sides. <strong>The box model describes</strong> how these
+                                    elements work
+                                    together to create a box as displayed by CSS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-white border border-gray-200">
+                            <h2 class="accordion-header mb-0" id="headingFour">
+                                <button class="
+                              accordion-button
+                              collapsed
+                              relative
+                              flex
+                              items-center
+                              w-full
+                              py-4
+                              px-5
+                              text-xl lg:text-2xl font-garamond font-extrabold text-gray-800 text-left
+                              bg-white
+                              border-0
+                              rounded-none
+                              transition
+                              focus:outline
+                              focus:text-accent-1
+                            " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                    aria-expanded="false" aria-controls="collapseFour">
+                                    What is Semantic Tag?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body py-4 px-5 text-dark-3 font-poppins">
+                                    <strong>The semantic HTML tags</strong> help the search engines and other user
+                                    devices to determine
+                                    the importance and context of web pages. The pages made with semantic elements are
+                                    much easier to read. It has greater <strong>accessibility</strong>. It offers a
+                                    <strong>better user
+                                        experience.</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="h-full w-fit mx-auto lg:mx-0" src="./images/faq.png" alt="">
+            </section>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-dark-1">
+        <section
+            class="container mx-auto lg:flex font-poppins justify-between py-20 md:py-36 items-start text-center lg:text-left gap-y-8 space-y-4 lg:space-y-0">
+            <!-- About us -->
+            <div class="flex-col lg:flex lg:max-w-xs gap-8">
+                <img class="mx-auto w-fit lg:mx-0" src="./images/logo.png" alt="">
+                <p class="text-dark-5">There are many variations of passages of Lorem Ipsum available, but the majority
+                    have suffered
+                    alteration in some form, by injected humour.</p>
+            </div>
+            <!-- Our links -->
+            <div class="flex flex-col gap-4 lg:gap-8">
+                <h1 class="text-white font-garamond font-extrabold text-2xl">Useful Links</h1>
+                <ul class="text-dark-5 space-y-2 lg:space-y-4">
+                    <li class="hover:text-gray-600 cursor-pointer transition-all">Home</li>
+                    <li class="hover:text-gray-600 cursor-pointer transition-all">About Us</li>
+                    <li class="hover:text-gray-600 cursor-pointer transition-all">Cases</li>
+                    <li class="hover:text-gray-600 cursor-pointer transition-all">Blog</li>
+                    <li class="hover:text-gray-600 cursor-pointer transition-all">Contact Us</li>
+                </ul>
+            </div>
+            <!-- Our address -->
+            <div class="flex flex-col gap-4 lg:gap-8">
+                <h1 class="text-white font-garamond font-extrabold text-2xl">Contact Now</h1>
+                <p class="text-dark-5">555 4th 5t NW, Washington<br>
+                    DC 20530, United States</p>
+                <p class="text-dark-5">+88 01750 000 000<br>
+                    +88 01750 000 000</p>
+                <p class="text-dark-5">info@gmail.com<br>
+                    info@gmail.com</p>
+            </div>
+            <!-- Our Newsletter -->
+            <div class="flex flex-col lg:max-w-xs gap-4 lg:gap-8">
+                <h1 class="text-white font-garamond font-extrabold text-2xl">Subscribe</h1>
+                <p class="text-dark-5">Subscribe for our latest and Articles. We Won't Give You Spam Mails</p>
+                <div class="flex font-poppins items-center justify-center lg:justify-start">
+                    <input type="text"
+                        class="h-16 w-64 rounded-xl rounded-r-none form-control border-4 px-4 focus:text-gray-700 focus:bg-white focus:outline outline-1 outline-accent-1 focus:border-accent-1 focus:border-2 transition ease-in-out"
+                        placeholder="Email Address" />
+                    <button
+                        class="flex items-center h-16 py-3 px-6 bg-accent-1 rounded-xl rounded-l-none text-white text-xl font-semibold transition-all hover:scale-105">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- Tailwind Elements (Components) JS -->
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</body>
+
+</html>
